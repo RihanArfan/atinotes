@@ -1,7 +1,7 @@
 {
   "name": "atinotes",
   "private": true,
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@10.15.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -20,6 +20,7 @@
     "@nuxthub/core": "^0.9.0",
     "@nuxtjs/mdc": "^0.17.0",
     "@nuxtjs/plausible": "^1.2.0",
+    "@vercel/kv": "^3.0.0",
     "nuxt": "^3.17.5",
     "nuxt-auth-utils": "^0.5.20",
     "nuxt-og-image": "5.1.6",
@@ -32,10 +33,15 @@
     "@types/node": "^24.0.3",
     "eslint": "^9.29.0",
     "typescript": "^5.8.3",
-    "vue-tsc": "^2.2.10",
-    "wrangler": "^4.20.1"
+    "vue-tsc": "^2.2.10"
   },
   "resolutions": {
     "@nuxtjs/tailwindcss": "6.12.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "@nuxtjs/tailwindcss": "6.12.2",
+      "@nuxthub/core": "link:../../../../../Library/pnpm/global/5/node_modules/@nuxthub/core"
+    }
   }
 }

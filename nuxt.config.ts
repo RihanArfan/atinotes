@@ -37,6 +37,14 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-07-29',
 
+  nitro: {
+    storage: {
+      KV: {
+        driver: 'vercel-kv'
+      }
+    }
+  },
+
   hub: {
     kv: true
   },
