@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxthub/core',
+    'nuxthub-core-dev', // @nuxthub/core
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxt/content',
@@ -31,6 +31,13 @@ export default defineNuxtConfig({
   },
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-07-29',
+
+  nitro: {
+    cloudflare: {
+      nodeCompat: true,
+      deployConfig: true
+    }
+  },
 
   hub: {
     kv: true
